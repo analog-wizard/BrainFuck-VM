@@ -1,10 +1,10 @@
 TARGET = bf_vm
 
-SRCS  = $(shell find . -type f -name "*.c")
-HEADS = $(shell find . -type f -name "*.h")
-OBJS = $(SRCS:.c=.o)
+SRCS  = $(shell find . -type f -name "*.cpp")
+HEADS = $(shell find . -type f -name "*.hpp")
+OBJS = $(SRCS:.cpp=.o)
 
-CXXFLAGS = -O3 -Wall -Wextra -std=c99 $(INCLUDES)
+CXXFLAGS = -O3 -Wall -Wextra -std=c++20 $(INCLUDES)
 LDFLAGS = -lm
 
 all: clean $(TARGET)
